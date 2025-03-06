@@ -20,7 +20,7 @@ module AASM
           @result = if support_parameters?
                       exec_proc(parameters_to_arity)
                     else
-                      exec_proc(subject.arity)
+                      exec_proc(subject.parameters.length)
                     end
         end
 
