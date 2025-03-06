@@ -22,7 +22,7 @@ module AASM
         private
 
         def subject_arity
-          @arity ||= record.__send__(:method, subject.to_sym).arity
+          @arity ||= record.__send__(:method, subject.to_sym).parameters.length
         end
 
         # rubocop:disable Metrics/AbcSize
