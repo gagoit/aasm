@@ -44,7 +44,7 @@ module AASM
         # rubocop:enable Metrics/AbcSize
 
         def subject_arity
-          @arity ||= subject.instance_method(:initialize).arity
+          @arity ||= subject.instance_method(:initialize).parameters.length
         end
       end
     end
